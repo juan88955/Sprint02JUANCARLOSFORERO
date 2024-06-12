@@ -205,12 +205,13 @@ td {
 
 .contenidoBe {
   width: 80%;
-  height: 69vh;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  min-height: 100vh;
+  min-height: 80vh;
+  align-items: center;
+  justify-items: center ;
 }
 
 .contenidoBe img{
@@ -222,17 +223,21 @@ td {
   margin: 5px;
   border-radius: 6px;
   margin: 20px;
-
-
+  display: flex;
 }
 
 .tarjeta{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     border-radius: 20px;
 }
 
 .texto{
-    margin-left: 20px ;
+    margin-left: 50px ;
+    align-content: center;
+}
+
+.edittarjeta{
+  margin-right: 45px;
+
 }
