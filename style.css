@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: 0;
 }
 
 body {
@@ -25,7 +26,6 @@ header {
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: flex-start;
   gap: 1rem;
   margin: 10px;
 }
