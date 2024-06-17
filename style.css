@@ -124,6 +124,7 @@ main {
   width: 70%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 footer {
@@ -143,18 +144,21 @@ footer p {
 
 /* inicio css contact */
 
-.bannerinffo {
-  margin: 30px;
+.bannerinfo {
+  margin: 10px;
   width: 100vh;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgb(10, 10, 10);
 }
-
+.img_contact{
+  width: 75%;
+  border-radius: 10px;
+}
 .parrafo {
   font-size: 150%;
+  margin: 5px;
 }
 
 .infocontact,
@@ -172,7 +176,7 @@ footer p {
   margin-top: 10px;
 }
 
-table {
+.tabla1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,6 +184,7 @@ table {
   margin-top: 40px;
   border-collapse: collapse;
 }
+
 
 th,
 td {
@@ -207,12 +212,12 @@ td {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  min-height: 80vh;
+  min-height: 47vh;
   align-items: center;
-  justify-items: center ;
+  justify-items: center;
 }
 
-.contenidoBe img{
+.contenidoBe img {
   width: 200px;
   height: 200px;
   border-radius: 2px;
@@ -224,20 +229,19 @@ td {
   display: flex;
 }
 
-.tarjeta{
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
+.tarjeta {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
 }
 
-.texto{
-    margin-left: 50px ;
-    align-content: center;
+.texto {
+  margin-left: 50px;
+  align-content: center;
 }
 
-.edittarjeta{
+.edittarjeta {
   margin-right: 45px;
-
 }
 
 /* inicio css raffle */
@@ -247,25 +251,26 @@ td {
   flex-direction: row-reverse;
   justify-content: space-around;
   width: 95%;
-  /* margin: 50px auto; */
   padding: 20px;
   align-items: center;
-
 
   border: 1px solid white;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-form{
-
+form {
   display: flex;
-    flex-direction: column;
-    width: 20%;
-      border: 1px solid white;
-
+  flex-direction: column;
+  width: 23%;
+  border: 1px solid white;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-input[type="text"], input[type="date"], select, textarea {
+input[type="text"],
+input[type="date"],
+select,
+textarea {
   width: 90%;
   padding: 10px;
   margin: 10px 0;
@@ -278,23 +283,15 @@ textarea {
 }
 
 .payment-options {
-  /* margin: 10px 0; */
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: 10px;
+  align-items: flex-start;
 }
 
-
-.payment1 input{
-margin: 1px;
-/*   
-margin: 10px; */
-  /* margin-right: 10px; */
-
-
+.payment1 input {
+  margin: 1px;
 }
-
 
 .terms {
   display: flex;
@@ -308,19 +305,111 @@ margin: 10px; */
 
 .submit-btn {
   display: block;
-  width: 100%;
+  width: 55%;
   padding: 10px;
-  background-color: white;
-  color: black;
+  background-color: #eeaeb9;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.map-container{
+.map-container {
   display: flex;
   justify-content: space-around;
-  margin-left:20px ;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.map-container-p{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* Media query para resolución de 768px */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .logo {
+    order: 0;
+    width: 44%;
+    justify-content: center;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    order: 1; 
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  .banner,
+  .banner2,
+  .banner2 .infobanner,
+  .banner2 .imgbanner {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner2 .infobanner,
+  .banner2 .imgbanner {
+    height: auto;
+    margin: 0;
+  }
+  .bannerinfo{
+    height: 54vh;
+    width: 68vh;
+  }
+.e-mail{
+  font-size: 24px;
+}
+.Phone{
+  font-size: 21px;
+}
+
+  .contenidoBe {
+    width: 100%;
+  }
+
+  .tabla1{
+    flex-direction: column;
+  }
+  
+  .edittarjeta{
+    margin-right: 45px;
+    flex-direction: column;
+  }
+
+  .tarjeta{
+    flex-direction: column;
+  }
+
+  .form-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form {
+    width: 60%;
+  }
+  .map-container{
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+  }
 }
 
 
