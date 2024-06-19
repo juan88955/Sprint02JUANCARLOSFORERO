@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -79,7 +79,20 @@ main {
   align-items: center;
   width: 100%;
   margin-top: 13px;
+  flex-grow: 1;
 }
+
+.information_main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 13px;
+  flex-grow: 1;
+  height: 90vh;
+}
+
 
 .banner {
   width: 100%;
@@ -92,6 +105,8 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
+
 
 .banner2 {
   width: 100%;
@@ -152,10 +167,12 @@ footer p {
   justify-content: center;
   align-items: center;
 }
-.img_contact{
+
+.img_contact {
   width: 75%;
   border-radius: 10px;
 }
+
 .parrafo {
   font-size: 150%;
   margin: 5px;
@@ -176,20 +193,24 @@ footer p {
   margin-top: 10px;
 }
 
-.tabla1 {
+.div_tabla {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   height: 100vh;
-  margin-top: 40px;
-  border-collapse: collapse;
+  align-items: center;
+  justify-content: center;
 }
 
+.tabla1 {
+  align-items: center;
+  border-collapse: collapse;
+}
 
 th,
 td {
   border: 2px solid rgb(255, 255, 255);
-  padding: 60px;
+  padding: 20px;
   text-align: left;
   background-color: #e77070;
 }
@@ -199,6 +220,7 @@ th {
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
+
 td {
   color: rgb(0, 0, 0);
   background-color: #eeaeb9;
@@ -251,7 +273,6 @@ td {
   flex-direction: row-reverse;
   justify-content: space-around;
   width: 95%;
-  padding: 20px;
   align-items: center;
 
   border: 1px solid white;
@@ -321,15 +342,46 @@ textarea {
   flex-direction: column;
 }
 
-.map-container-p{
+.map-container-p {
   display: flex;
   justify-content: space-around;
   font-size: 20px;
-  padding: 8px;
 }
 
-/* Media query para resolución de 768px */
+/* Media query para resolución de 768px  */
+
 @media screen and (max-width: 768px) {
+
+
+  .index_main {
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .information_main {
+    height: 59vh;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .aboutUs_main {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .raffle_main {
+    height: 207vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   header {
     flex-direction: column;
   }
@@ -338,12 +390,14 @@ textarea {
     order: 0;
     width: 44%;
     justify-content: center;
+    align-items: center;
   }
 
   .navbar {
     width: 100%;
     justify-content: center;
-    order: 1; 
+    align-items: center;
+    order: 1;
   }
 
   nav ul {
@@ -357,59 +411,144 @@ textarea {
 
   .banner,
   .banner2,
-  .banner2 .infobanner,
+  .banner2,
   .banner2 .imgbanner {
     flex-direction: column;
     width: 100%;
+    gap: 20px;
   }
 
-  .banner2 .infobanner,
-  .banner2 .imgbanner {
+  .banner2_index {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+
+  .banner1 {
+    flex-direction: column-reverse;
+
+  }
+
+  .banner2 .banner2 .imgbanner {
     height: auto;
     margin: 0;
   }
-  .bannerinfo{
-    height: 54vh;
-    width: 68vh;
+
+  .infobanner1 {
+    flex-direction: column-reverse;
   }
-.e-mail{
-  font-size: 24px;
-}
-.Phone{
-  font-size: 21px;
-}
+
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  .bannerinfo {
+    width: 28vh;
+  }
+
+  .img_contact {
+    width: 93%;
+
+  }
+
+  .e-mail {
+    font-size: 34px;
+  }
+
+  .Phone {
+    font-size: 21px;
+  }
 
   .contenidoBe {
     width: 100%;
+    margin-top: 38px;
   }
 
-  .tabla1{
-    flex-direction: column;
+  th,
+  td {
+    width: 300px;
+    font-size: 12px;
   }
-  
-  .edittarjeta{
+
+
+  .div_tabla {
+    width: 100px;
+  }
+
+  .tabla1 {
+    width: 50px;
+  }
+
+  .edittarjeta {
     margin-right: 45px;
     flex-direction: column;
   }
 
-  .tarjeta{
+  .tarjeta {
     flex-direction: column;
+  }
+
+  form {
+    width: 90%;
+    margin-top: 50px;
   }
 
   .form-container {
     flex-direction: column;
-    width: 100%;
+    width: 86%;
   }
 
-  form {
-    width: 60%;
-  }
-  .map-container{
+  .map-container {
     flex-direction: column;
     align-items: center;
     width: 40%;
     height: 40%;
+    margin-top: 50px;
+    gap: 3px;
   }
+
+  .map {
+    width: 300px;
+  }
+
+
 }
 
 
+/* Media query para resolución de minimo de 768px  */
+
+@media screen and (min-width: 769px) and (max-width:1024px) {
+
+  .img_contact {
+    width: 54%;
+    border-radius: 10px;
+  }
+
+  .bannerinfo {
+    height: 90vh;
+    width: 100%;
+  }
+
+
+  .contenidoBe {
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+  }
+
+  .form-container {
+    height: 74vh;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px){
+  .contenidoBe{
+    min-height: 73vh;
+  }
+}

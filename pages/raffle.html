@@ -25,7 +25,7 @@
       <img src="../IceCream1/logo.png" alt="logo" class="logo" />
     </div>
   </header>
-  <main>
+  <main class="raffle_main">
     <section class="titulo3">
       <h1>Raffle</h1>
       <h2>
@@ -52,7 +52,8 @@
         <label for="date">Choose Date</label>
         <input type="date" id="date" name="date" required />
 
-        <div class="payment-options">
+
+        <fieldset class="payment-options">
           <legend>Payment Options</legend>
           <label>
             <input class="payment1" type="radio" name="payment" value="cash" required />
@@ -66,7 +67,7 @@
             <input type="radio" name="payment" value="debit-card" /> Debit
             Card
           </label>
-        </div>
+        </fieldset>
 
         <label for="message">Message (Optional)</label>
         <textarea id="message" name="message"></textarea>
@@ -77,13 +78,12 @@
           <button type="submit" class="submit-btn">Send</button>
         </div>
       </form>
-
       <div class="map-container">
         <h5 class="map-container-p">Our location is located at:</h5>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115265.84037070765!2d-80.53524952345879!3d25.46975499516873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9e5f76448d9db%3A0x2d7bcabf999e3d07!2sHomestead%2C%20Florida%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1718384022352!5m2!1ses!2sco"
-          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600"
-          height="450">
+          class="map" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          width="300" height="450">
         </iframe>
       </div>
     </fieldset>
